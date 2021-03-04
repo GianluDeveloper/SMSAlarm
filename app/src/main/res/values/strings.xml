@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SMS Alarm</string>
+    <string name="title_home">SMS Alarm</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="saved_high_score_key">APP</string>
+</resources>
