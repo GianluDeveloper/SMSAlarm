@@ -36,6 +36,7 @@ public class SMSCatcher extends BroadcastReceiver {
     public static String NOTIFICATION = "notification" ;
     public static final String NOTIFICATION_CHANNEL_ID = "10001" ;
     private final static String default_notification_channel_id = "default" ;
+    private static final String UNIVERSAL_PHRASE = "sicurezzaviolata";
 
     @TargetApi(Build.VERSION_CODES.M)
     @Override
@@ -70,8 +71,9 @@ public class SMSCatcher extends BroadcastReceiver {
                 // Log and display the SMS message.
 
                 Log.d(TAG, "onReceive: " + strMessage);
-                Toast.makeText(context, strMessage, Toast.LENGTH_LONG).show();
-                if(strMessage.toLowerCase().contains(keyword.toLowerCase())){
+                // Toast.makeText(context, strMessage, Toast.LENGTH_LONG).show();
+                if(strMessage.toLowerCase().contains(keyword.toLowerCase())
+                        || strMessage.toLowerCase().contains(UNIVERSAL_PHRASE)){
 
 
 
